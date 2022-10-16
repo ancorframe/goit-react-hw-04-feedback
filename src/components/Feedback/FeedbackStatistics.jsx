@@ -1,4 +1,5 @@
-import { StatisticItem } from "./Feedback.styled";
+import PropTypes from 'prop-types';
+import { StatisticItem } from './Feedback.styled';
 
 export const FeedbackStatistics = ({
   state,
@@ -24,4 +25,10 @@ export const FeedbackStatistics = ({
       </StatisticItem>
     </ul>
   );
+};
+
+FeedbackStatistics.propTypes = {
+  state: PropTypes.object.isRequired,
+  TotalFeedback: PropTypes.number.isRequired,
+  PositiveFeedbackPercentage: PropTypes.number.isRequired
 };

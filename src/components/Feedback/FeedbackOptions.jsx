@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ButtonList, Button } from './Feedback.styled';
 
 export const FeedbackOptions = ({
@@ -24,4 +25,10 @@ export const FeedbackOptions = ({
       </li>
     </ButtonList>
   );
+};
+
+FeedbackOptions.propTypes = {
+  onHandleGood: PropTypes.func.isRequired,
+  onHandleNeutral: PropTypes.func.isRequired,
+  onHandleBad: PropTypes.func.isRequired,
 };
